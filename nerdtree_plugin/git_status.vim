@@ -182,8 +182,8 @@ endfunction
 
 function! s:NERDTreeGetIndicator(statusKey)
     if exists('g:NERDTreeIndicatorMapCustom')
-        let l:indicator = get(g:NERDTreeIndicatorMapCustom, a:statusKey, '')
-        if l:indicator !=# ''
+        let l:indicator = get(g:NERDTreeIndicatorMapCustom, a:statusKey, 0)
+        if l:indicator !=# 0
             return l:indicator
         endif
     endif
